@@ -217,6 +217,10 @@ echo Vamos la colar agora
 read year
 crontab -e
 
+echo Excluindo Sudo
+read year
+apt-get purge sudo -y
+
 echo FIM AGORA CTRL+C para cancelar reboot ou enter para reboot
 read year
 reboot
