@@ -1,0 +1,6 @@
+#!/bin/sh
+
+/bin/kill -9 `/bin/pidof apache2`
+sleep 2
+/etc/init.d/apache2 start
+
