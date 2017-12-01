@@ -220,6 +220,14 @@ echo Excluindo Sudo
 read year
 apt-get purge sudo -y
 
+echo Zerando dongle.db para cadastro dos modulos
+echo copiar com o botao direito e colar no sqlite, depois .quit pra sair
+read year
+echo Vamos la
+read year
+cd /var/www/html/dongle/
+sqlite3 dongle.db
+
 echo FIM AGORA CTRL+C para cancelar reboot ou enter para reboot
 read year
 reboot
