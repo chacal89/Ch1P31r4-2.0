@@ -170,13 +170,12 @@ wget https://github.com/chacal89/Ch1P31r4-2.0/raw/master/verificamemoria
 
 echo Ajustando Permissões
 read year
-chown www-data:www-data /etc/asterisk
+chown -R www-data:www-data /etc/asterisk
 chown -R asterisk. /etc/asterisk
-chmod 777 rao* /etc/asterisk
-chown root:root /etc/asterisk
-chown -R www-data:www-data /var/www/html/dongle
+chmod -R www-data:www-data /etc/asterisk/rao*
+chown -R www-data:www-data /var/www/html/dongle/*
 chown -R www-data:www-data /var/www/html/dongle/css/images
-chmod 777 /root/scripts
+chmod -R www-data:www-data /root/scripts/*
 chmod 777 force_restart_asterisk /root/scripts/
 chmod 777 force_restart_apache /root/scripts/
 chmod 777 verificamemoria /root/scripts/
