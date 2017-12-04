@@ -216,9 +216,15 @@ echo Vamos la colar agora
 read year
 crontab -e
 
-echo Excluindo Sudo
+echo Editando Visudo
 read year
-apt-get purge sudo -y
+echo Copiar e Colar abaixo de Users Privilleges abaixo de root
+echo "programmer ALL=(ALL:ALL) ALL NOPASSWD:ALL"
+echo "www-data ALL=(ALL:ALL) ALL NOPASSWD:ALL"
+read year
+echo Vamos La
+read year
+visudo
 
 echo Zerando dongle.db para cadastro dos modulos
 echo copiar com o botao direito e colar no sqlite, depois .quit pra sair
