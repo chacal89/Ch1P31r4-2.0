@@ -172,13 +172,17 @@ echo Ajustando Permissões
 read year
 chown -R www-data:www-data /etc/asterisk
 chown -R asterisk. /etc/asterisk
-chmod -R www-data:www-data /etc/asterisk/rao*
+chown -R www-data:www-data /etc/asterisk/rao*
 chown -R www-data:www-data /var/www/html/dongle/*
 chown -R www-data:www-data /var/www/html/dongle/css/images
 chmod -R www-data:www-data /root/scripts/*
-chmod 777 force_restart_asterisk /root/scripts/
-chmod 777 force_restart_apache /root/scripts/
-chmod 777 verificamemoria /root/scripts/
+chmod +x force_restart_asterisk /root/scripts/
+chmod +x force_restart_apache /root/scripts/
+chmod +x verificamemoria /root/scripts/
+chmod +x verificamodem.php /etc/asterisk/
+chmod +x monitorasterisk.php /etc/asterisk/
+chmod +x limpamodem.php /etc/asterisk/
+chmod +x destravaModem.php /var/lib/asterisk/agi-bin/
 
 
 echo reiniciando asterisk
