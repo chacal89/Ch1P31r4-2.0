@@ -232,11 +232,17 @@ visudo
 
 echo Zerando dongle.db para cadastro dos modulos
 echo copiar com o botao direito e colar no sqlite, depois .quit pra sair
+echo "delete from dongle where  id > 0"
 read year
 echo Vamos la
 read year
 cd /var/www/html/dongle/
 sqlite3 dongle.db
+
+echo Alterando senha do SQL que colocou na compilacao do asterisk
+read year
+cd /etc/asterisk
+nano cdr_mysql.conf
 
 echo FIM AGORA CTRL+C para cancelar reboot ou enter para reboot
 read year
